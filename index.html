@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>USL Daily Reports System</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-container">
+    <header>
+      <img src="assets/logo.jpg" alt="USL Logo" class="logo" />
+      <h1>USL Daily Reports System</h1>
+    </header>
+
+    <main id="content">
+      <!-- Login form -->
+      <section id="login-section" class="visible">
+        <h2>Employee Login</h2>
+        <input type="email" id="email" placeholder="Enter your email" />
+        <input type="password" id="password" placeholder="Enter your password" />
+        <button id="loginBtn">Login</button>
+        <p>Huna akaunti? <a href="#" id="showSignup">Jisajili hapa</a></p>
+      </section>
+
+      <!-- Signup form -->
+      <section id="signup-section" class="hidden">
+        <h2>Employee Registration</h2>
+        <input type="email" id="signupEmail" placeholder="Enter your email" />
+        <input type="password" id="signupPassword" placeholder="Create password" />
+        <select id="role">
+          <option value="employee">Employee</option>
+          <option value="manager">Manager</option>
+        </select>
+        <button id="signupBtn">Sign Up</button>
+        <p>Tayari una akaunti? <a href="#" id="showLogin">Ingia hapa</a></p>
+      </section>
+
+      <!-- Report form -->
+      <section id="report-section" class="hidden">
+        <h2>Tuma Ripoti ya Kazi</h2>
+        <textarea id="reportText" rows="6" placeholder="Andika ripoti yako hapa..."></textarea>
+        <button id="submitReport">Tuma Ripoti</button>
+        <button id="logoutBtn">Logout</button>
+      </section>
+
+      <!-- Manager dashboard -->
+      <section id="manager-section" class="hidden">
+        <h2>Ripoti Zote za Wafanyakazi</h2>
+        <div id="reportsList"></div>
+        <button id="logoutManager">Logout</button>
+      </section>
+    </main>
+  </div>
+
+  <script src="firebase-config.js"></script>
+  <script src="app.js"></script>
+
+  <footer>
+        <p>&copy; 2025 FadyX99 Was Here.</p>
+        <p>USL 2025 All rights reserved.</p>
+  </footer>
+</body>
+</html>
